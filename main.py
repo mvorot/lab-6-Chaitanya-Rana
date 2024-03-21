@@ -5,6 +5,13 @@ def encode(password):
     return str(encoded_pass)
 
 
+def decode(encodedPassword):
+    decodedPass = ""
+    for char in encodedPassword:
+        decodedPass += str(int(char)-3)
+    return decodedPass
+
+
 def main():
     while True:
         print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n')
